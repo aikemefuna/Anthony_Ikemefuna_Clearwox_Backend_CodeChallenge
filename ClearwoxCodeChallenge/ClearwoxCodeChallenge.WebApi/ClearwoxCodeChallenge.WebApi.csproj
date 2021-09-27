@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp5.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <Authors>Anthony Ikemefuna</Authors>
     <Company>Thokem Technology Limited</Company>
     <RepositoryUrl>https://github.com/iammukeshm/CleanArchitecture.WebApi</RepositoryUrl>
@@ -38,6 +38,10 @@
     <ProjectReference Include="..\ClearwoxCodeChallenge.Infrastructure.Identity\ClearwoxCodeChallenge.Infrastructure.Identity.csproj" />
     <ProjectReference Include="..\ClearwoxCodeChallenge.Infrastructure.Persistence\ClearwoxCodeChallenge.Infrastructure.Persistence.csproj" />
     <ProjectReference Include="..\ClearwoxCodeChallenge.Infrastructure.Shared\ClearwoxCodeChallenge.Infrastructure.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\v1\" />
   </ItemGroup>
 
 </Project>

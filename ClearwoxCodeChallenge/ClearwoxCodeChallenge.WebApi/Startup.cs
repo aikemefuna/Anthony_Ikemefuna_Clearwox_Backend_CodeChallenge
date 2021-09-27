@@ -2,6 +2,7 @@ using ClearwoxCodeChallenge.Application;
 using ClearwoxCodeChallenge.Application.Interfaces;
 using ClearwoxCodeChallenge.Infrastructure.Identity;
 using ClearwoxCodeChallenge.Infrastructure.Persistence;
+using ClearwoxCodeChallenge.Infrastructure.Persistence.SeedData;
 using ClearwoxCodeChallenge.Infrastructure.Shared;
 using ClearwoxCodeChallenge.WebApi.Extensions;
 using ClearwoxCodeChallenge.WebApi.Services;
@@ -56,6 +57,7 @@ namespace ClearwoxCodeChallenge.WebApi
              {
                  endpoints.MapControllers();
              });
+            DummyData.PrepPopulation(app);
         }
     }
 }

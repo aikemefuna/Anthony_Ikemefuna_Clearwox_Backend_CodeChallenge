@@ -2,11 +2,7 @@
 using ClearwoxCodeChallenge.Domain.Common;
 using ClearwoxCodeChallenge.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -23,7 +19,8 @@ namespace ClearwoxCodeChallenge.Infrastructure.Persistence.Contexts
             _dateTime = dateTime;
             _authenticatedUser = authenticatedUser;
         }
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Department> Department { get; set; }
+        public DbSet<Employee> Employee { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {

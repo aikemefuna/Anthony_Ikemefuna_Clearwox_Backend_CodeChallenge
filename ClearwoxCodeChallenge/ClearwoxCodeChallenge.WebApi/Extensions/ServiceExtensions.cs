@@ -3,8 +3,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ClearwoxCodeChallenge.WebApi.Extensions
 {
@@ -18,13 +16,13 @@ namespace ClearwoxCodeChallenge.WebApi.Extensions
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "Clean Architecture - ClearwoxCodeChallenge.WebApi",
-                    Description = "This Api will be responsible for overall data distribution and authorization.",
+                    Title = "Anthony Ikemefuna - ClearwoxCodeChallenge.WebApi",
+                    Description = "This Api is developed as a test project for Clearwox .",
                     Contact = new OpenApiContact
                     {
-                        Name = "codewithmukesh",
-                        Email = "hello@codewithmukesh.com",
-                        Url = new Uri("https://codewithmukesh.com/contact"),
+                        Name = "Engr Anthony",
+                        Email = "aikemefuna3@gmail.com",
+                        Url = new Uri("aikemefuna3@gmail.com"),
                     }
                 });
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme

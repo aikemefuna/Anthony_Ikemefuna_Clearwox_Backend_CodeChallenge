@@ -19,5 +19,9 @@
   <ItemGroup>
     <ProjectReference Include="..\ClearwoxCodeChallenge.Domain\ClearwoxCodeChallenge.Domain.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Features\" />
+    <Folder Include="Mappings\" />
+  </ItemGroup>
 
 </Project>

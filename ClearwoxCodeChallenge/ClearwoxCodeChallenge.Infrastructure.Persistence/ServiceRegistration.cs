@@ -1,14 +1,9 @@
 ﻿using ClearwoxCodeChallenge.Application.Interfaces;
-using ClearwoxCodeChallenge.Application.Interfaces.Repositories;
 using ClearwoxCodeChallenge.Infrastructure.Persistence.Contexts;
-using ClearwoxCodeChallenge.Infrastructure.Persistence.Repositories;
 using ClearwoxCodeChallenge.Infrastructure.Persistence.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ClearwoxCodeChallenge.Infrastructure.Persistence
 {
@@ -30,7 +25,6 @@ namespace ClearwoxCodeChallenge.Infrastructure.Persistence
             }
             #region Repositories
             services.AddTransient(typeof(IGenericRepositoryAsync<>), typeof(GenericRepositoryAsync<>));
-            services.AddTransient<IProductRepositoryAsync, ProductRepositoryAsync>();
             #endregion
         }
     }

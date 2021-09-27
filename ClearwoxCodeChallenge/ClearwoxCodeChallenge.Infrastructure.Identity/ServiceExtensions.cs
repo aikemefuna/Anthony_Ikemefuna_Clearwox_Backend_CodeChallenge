@@ -1,11 +1,7 @@
-﻿using ClearwoxCodeChallenge.Application.Exceptions;
-using ClearwoxCodeChallenge.Application.Interfaces;
-using ClearwoxCodeChallenge.Application.Wrappers;
+﻿using ClearwoxCodeChallenge.Application.Wrappers;
 using ClearwoxCodeChallenge.Domain.Settings;
 using ClearwoxCodeChallenge.Infrastructure.Identity.Contexts;
-using ClearwoxCodeChallenge.Infrastructure.Identity.Helpers;
 using ClearwoxCodeChallenge.Infrastructure.Identity.Models;
-using ClearwoxCodeChallenge.Infrastructure.Identity.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -15,9 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using System;
-using System.Reflection.Metadata.Ecma335;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ClearwoxCodeChallenge.Infrastructure.Identity
 {
@@ -38,9 +32,7 @@ namespace ClearwoxCodeChallenge.Infrastructure.Identity
                     b => b.MigrationsAssembly(typeof(IdentityContext).Assembly.FullName)));
             }
             services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<IdentityContext>().AddDefaultTokenProviders();
-            #region Services
-            services.AddTransient<IAccountService, AccountService>();
-            #endregion
+
             services.Configure<JWTSettings>(configuration.GetSection("JWTSettings"));
             services.AddAuthentication(options =>
             {
