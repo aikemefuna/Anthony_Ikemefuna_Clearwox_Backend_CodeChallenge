@@ -1,0 +1,1 @@
+﻿If you want to switch from InMemory Database to real database (MSSQL). Please change the setting  "UseInMemoryDatabase" in the app-setting.json file to the value of "true" or "false"

@@ -1,4 +1,5 @@
-﻿using ClearwoxCodeChallenge.Infrastructure.Persistence.Contexts;
+﻿using ClearwoxCodeChallenge.Domain.Entities;
+using ClearwoxCodeChallenge.Infrastructure.Persistence.Contexts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -12,16 +13,17 @@ namespace ClearwoxCodeChallenge.Infrastructure.Persistence.SeedData
         {
             using (var serviceScope = builder.ApplicationServices.CreateScope())
             {
-                SeedPlatformData(serviceScope.ServiceProvider.GetService<ApplicationDbContext>());
+                SeedDepartmentData(serviceScope.ServiceProvider.GetService<ApplicationDbContext>());
+                SeedEmployeeData(serviceScope.ServiceProvider.GetService<ApplicationDbContext>());
             }
         }
-        public static void SeedPlatformData(ApplicationDbContext context)
+        public static void SeedDepartmentData(ApplicationDbContext context)
         {
             if (!context.Employee.Any())
             {
                 Console.WriteLine("Seeding Data.............");
-                context.Employee.AddRange(
-
+                context.Department.AddRange(
+                     new Department() { DepartmentId = 1, Address = "Lagos address" }
                 );
             }
             else
@@ -29,5 +31,22 @@ namespace ClearwoxCodeChallenge.Infrastructure.Persistence.SeedData
                 Console.WriteLine("==>> I already have data");
             }
         }
+        public static void SeedEmployeeData(ApplicationDbContext context)
+        {
+            if (!context.Employee.Any())
+            {
+                Console.WriteLine("Seeding Data.............");
+                context.Employee.AddRange(
+                    new Employee() { EmployeeId = 1, FirstName = "Anthony", LastName = "Ikemefuna", Address = "Ikeja Lagos Nigeria", JobTitle = "Software Engineer", DepartmentId = 1 },
+                       new Employee() { EmployeeId = 2, FirstName = "James", LastName = "Manuel", Address = "Ikeja Lagos Nigeria", JobTitle = "Software Tester", DepartmentId = 2 },
+                          new Employee() { EmployeeId = 3, FirstName = "Mary", LastName = "Joshua", Address = "Ikeja Lagos Nigeria", JobTitle = "Soultions Developer", DepartmentId = 1 }
+                );
+            }
+            else
+            {
+                Console.WriteLine("==>> I already have data");
+            }
+        }
+
     }
 }
