@@ -12,5 +12,17 @@ namespace Question6Excercise
             var responses = QuestionClass.TESTModule(-1);
             Console.WriteLine(response); ;
         }
+        public static int[] rotateArray(int[] array, int d)
+        {
+
+            int n = array.Length;
+
+            int[] rotatedVal = new int[n];
+
+            Array.Copy(array, d, rotatedVal, 0, n - d);
+            Array.Copy(array, 0, rotatedVal, n - d, d);
+
+            return rotatedVal;
+        }
     }
 }

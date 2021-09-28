@@ -31,6 +31,7 @@ namespace ClearwoxCodeChallenge.Application.Features.Employee.Queries
             await Task.Delay(2);
             var employees = _employeeRepository
                 .GetAll()
+                .Where(c => c.DepartmentId == request.DepartmentId)
                 .Select(c => new EmployeeDTO
                 {
                     FirstName = c.FirstName,
