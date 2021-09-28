@@ -9,6 +9,7 @@ namespace Question6Excercise
             var names = QuestionClass.NamesList;
             //iterate and print names
             var response = string.Join(Environment.NewLine, names);
+            var responses = QuestionClass.TESTModule(-1);
             Console.WriteLine(response); ;
         }
     }
