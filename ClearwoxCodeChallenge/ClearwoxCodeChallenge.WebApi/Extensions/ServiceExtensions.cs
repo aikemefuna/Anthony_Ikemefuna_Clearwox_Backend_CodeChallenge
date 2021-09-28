@@ -22,7 +22,7 @@ namespace ClearwoxCodeChallenge.WebApi.Extensions
                     {
                         Name = "Engr Anthony",
                         Email = "aikemefuna3@gmail.com",
-                        Url = new Uri("aikemefuna3@gmail.com"),
+                        Url = new Uri("https://mail.to:aikemefuna3@gmail.com"),
                     }
                 });
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme

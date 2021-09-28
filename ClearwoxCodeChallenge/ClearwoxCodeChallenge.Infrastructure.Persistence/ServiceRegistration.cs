@@ -1,5 +1,7 @@
 ﻿using ClearwoxCodeChallenge.Application.Interfaces;
+using ClearwoxCodeChallenge.Application.Interfaces.Repositories;
 using ClearwoxCodeChallenge.Infrastructure.Persistence.Contexts;
+using ClearwoxCodeChallenge.Infrastructure.Persistence.Repositories;
 using ClearwoxCodeChallenge.Infrastructure.Persistence.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -25,6 +27,7 @@ namespace ClearwoxCodeChallenge.Infrastructure.Persistence
             }
             #region Repositories
             services.AddTransient(typeof(IGenericRepositoryAsync<>), typeof(GenericRepositoryAsync<>));
+            services.AddTransient<IEmployeeRepository, EmployeeRepository>();
             #endregion
         }
     }

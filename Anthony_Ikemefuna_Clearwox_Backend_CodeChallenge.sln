@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearwoxCodeChallenge.Infra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearwoxCodeChallenge.Infrastructure.Shared", "ClearwoxCodeChallenge\ClearwoxCodeChallenge.Infrastructure.Shared\ClearwoxCodeChallenge.Infrastructure.Shared.csproj", "{E804721F-A05B-41D4-8EEF-61D81F945EA2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Question6", "Question6", "{6138E497-D828-4E2F-8ABB-621D5AF51D13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Question6Excercise", "Question6Excercise\Question6Excercise.csproj", "{48A857F7-366D-4E9A-A343-A7CEB2273410}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +57,10 @@ Global
 		{E804721F-A05B-41D4-8EEF-61D81F945EA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E804721F-A05B-41D4-8EEF-61D81F945EA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E804721F-A05B-41D4-8EEF-61D81F945EA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48A857F7-366D-4E9A-A343-A7CEB2273410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48A857F7-366D-4E9A-A343-A7CEB2273410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48A857F7-366D-4E9A-A343-A7CEB2273410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48A857F7-366D-4E9A-A343-A7CEB2273410}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +75,8 @@ Global
 		{09044A9D-D7F4-439E-9E3D-9912E105D8B1} = {FE6C1B49-1413-4CF9-8173-B7927B55A7B8}
 		{FA68195F-6B88-480C-966E-71D4984A20BA} = {FE6C1B49-1413-4CF9-8173-B7927B55A7B8}
 		{E804721F-A05B-41D4-8EEF-61D81F945EA2} = {FE6C1B49-1413-4CF9-8173-B7927B55A7B8}
+		{6138E497-D828-4E2F-8ABB-621D5AF51D13} = {CD45E301-EDC6-4ECD-BB1F-F56C597F2AF7}
+		{48A857F7-366D-4E9A-A343-A7CEB2273410} = {6138E497-D828-4E2F-8ABB-621D5AF51D13}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5690F381-A813-495C-B642-16E50396E850}

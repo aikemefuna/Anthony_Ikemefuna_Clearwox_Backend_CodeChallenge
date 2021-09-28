@@ -52,12 +52,12 @@ namespace ClearwoxCodeChallenge.WebApi
             app.UseSwaggerExtension();
             app.UseErrorHandlingMiddleware();
             app.UseHealthChecks("/health");
-
+            DummyData.PrepPopulation(app);
             app.UseEndpoints(endpoints =>
              {
                  endpoints.MapControllers();
              });
-            DummyData.PrepPopulation(app);
+
         }
     }
 }

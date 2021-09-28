@@ -25,6 +25,7 @@ namespace ClearwoxCodeChallenge.Infrastructure.Persistence.SeedData
                 context.Department.AddRange(
                      new Department() { DepartmentId = 1, Address = "Lagos address" }
                 );
+                context.SaveChanges();
             }
             else
             {
@@ -41,6 +42,7 @@ namespace ClearwoxCodeChallenge.Infrastructure.Persistence.SeedData
                        new Employee() { EmployeeId = 2, FirstName = "James", LastName = "Manuel", Address = "Ikeja Lagos Nigeria", JobTitle = "Software Tester", DepartmentId = 2 },
                           new Employee() { EmployeeId = 3, FirstName = "Mary", LastName = "Joshua", Address = "Ikeja Lagos Nigeria", JobTitle = "Soultions Developer", DepartmentId = 1 }
                 );
+                context.SaveChanges();
             }
             else
             {
